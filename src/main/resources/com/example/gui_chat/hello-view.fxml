@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="300" prefWidth="250" spacing="0.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui_chat.HelloController">
+    <children>
+        <TextArea fx:id="textArea" editable="false" nodeOrientation="LEFT_TO_RIGHT" opacity="0.51" prefHeight="275" prefWidth="250.0" promptText="Здесь будет ваш чат" style="-fx-background-color: c7bfbf;" wrapText="true">
+            <font>
+                <Font name="Roboto Light" size="18.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></TextArea>
+        <HBox prefHeight="25" prefWidth="250.0">
+            <children>
+                <TextField fx:id="textField" onAction="#handlerSend" prefWidth="170" promptText="Введите сообщение" />
+                <Button mnemonicParsing="false" onAction="#handlerSend" prefWidth="80" style="-fx-background-color: #008000;" text="Отправить" textFill="WHITE" />
+            </children>
+        </HBox>
+    </children>
+</VBox>
